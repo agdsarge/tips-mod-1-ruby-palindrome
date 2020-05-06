@@ -20,14 +20,27 @@ def recursive_add(a, b)
 end
 
 def recur_palindrome?(word)
+    return true if (word.length == 0 or word.length == 1)
+    if word[0] == word[-1]
+        recur_palindrome?(word[1..-2])
+    else
+        return false
+    end
+end
+
+puts recur_palindrome?("noon")
+puts recur_palindrome?("five")
+puts recur_palindrome?("radar")
+puts recur_palindrome?("learnlovecode")
+
+puts "\n\n"
+
+
 #test if [0] == [-1] if false return false else
-#return recus_palindrome("aceca")
+#return recur_palindrome("aceca")
 #("cec")
 #("e")
 #if word == '' return true
-
-
-end
 
 puts palindrome?("noon")
 puts palindrome?("five")
