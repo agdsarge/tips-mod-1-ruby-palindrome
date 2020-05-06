@@ -21,11 +21,7 @@ end
 
 def recur_palindrome?(word)
     return true if (word.length == 0 or word.length == 1)
-    if word[0] == word[-1]
-        recur_palindrome?(word[1..-2])
-    else
-        return false
-    end
+    word[0] == word[-1] ? recur_palindrome?(word[1..-2]) : false
 end
 
 puts recur_palindrome?("noon")
